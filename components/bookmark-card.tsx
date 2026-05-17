@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import type { Bookmark } from '@/lib/types'
 
 export function BookmarkCard({ bookmark, index }: { bookmark: Bookmark; index: number }) {
@@ -7,9 +8,18 @@ export function BookmarkCard({ bookmark, index }: { bookmark: Bookmark; index: n
       <article className="h-full flex flex-col bg-level-1 border border-border-subtle rounded-lg overflow-hidden hover:border-border-mid transition-colors duration-300">
         {/* Book cover */}
         <div className="relative h-52 flex-shrink-0">
-          <div className="absolute inset-0" style={{ background: bookmark.coverGradient }} />
+          {bookmark.coverImage ? (
+            <Image
+              src={bookmark.coverImage}
+              alt={bookmark.title}
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0" style={{ background: bookmark.coverGradient }} />
+          )}
           {/* Index badge */}
-          <span className="absolute top-4 right-4 font-mono text-label-sm text-zinc-muted tracking-[0.04em]">
+          <span className="absolute top-4 right-4 font-mono text-label-sm text-zinc-muted tracking-[0.04em] bg-black/50 px-2 py-0.5 rounded">
             {String(index + 1).padStart(2, '0')} / {String(bookmark.totalNotes).padStart(2, '0')}
           </span>
         </div>

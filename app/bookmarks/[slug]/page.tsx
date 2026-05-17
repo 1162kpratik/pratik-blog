@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft, Star, ExternalLink } from 'lucide-react'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
@@ -42,11 +43,19 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
           </Link>
 
           {/* ── Book Cover ── */}
-          <div
-            className="w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden mb-10 flex items-end"
-            style={{ background: book.coverGradient }}
-          >
-            <div className="p-8 md:p-10 w-full bg-gradient-to-t from-black/80 to-transparent">
+          <div className="relative w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden mb-10 flex items-end">
+            {book.coverImage ? (
+              <Image
+                src={book.coverImage}
+                alt={book.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            ) : (
+              <div className="absolute inset-0" style={{ background: book.coverGradient }} />
+            )}
+            <div className="relative z-10 p-8 md:p-10 w-full bg-gradient-to-t from-black/80 to-transparent">
               <p className="font-mono text-label-sm uppercase tracking-[0.1em] text-accent mb-2">
                 {book.author}
               </p>
