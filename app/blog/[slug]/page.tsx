@@ -1,6 +1,5 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import Image from 'next/image'
 import { ArrowLeft } from 'lucide-react'
 import { marked } from 'marked'
 import { Nav } from '@/components/nav'
@@ -68,13 +67,11 @@ export default async function BlogPost({ params }: { params: Params }) {
           {/* Cover image / gradient */}
           <div className="relative h-[300px] md:h-[420px] w-full rounded-lg overflow-hidden mb-14">
             {post.coverImage ? (
-              <Image
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
                 src={post.coverImage}
                 alt={post.title}
-                fill
-                sizes="100vw"
-                className="object-cover"
-                priority
+                className="absolute inset-0 w-full h-full object-cover"
               />
             ) : (
               <div className="absolute inset-0" style={{ background: post.coverGradient }} />

@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import type { Bookmark } from '@/lib/types'
 
 export function BookmarkCard({ bookmark, index }: { bookmark: Bookmark; index: number }) {
@@ -9,12 +8,11 @@ export function BookmarkCard({ bookmark, index }: { bookmark: Bookmark; index: n
         {/* Book cover */}
         <div className="relative h-52 flex-shrink-0">
           {bookmark.coverImage ? (
-            <Image
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
               src={bookmark.coverImage}
               alt={bookmark.title}
-              fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           ) : (
             <div className="absolute inset-0" style={{ background: bookmark.coverGradient }} />

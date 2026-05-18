@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { formatDate } from '@/lib/utils'
 import type { Post } from '@/lib/types'
 
@@ -10,7 +9,12 @@ export function BlogCardFeatured({ post }: { post: Post }) {
         {/* Cover — full width, taller */}
         <div className="relative h-[340px] w-full overflow-hidden">
           {post.coverImage ? (
-            <Image src={post.coverImage} alt={post.title} fill sizes="100vw" className="object-cover" />
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={post.coverImage}
+              alt={post.title}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
           ) : (
             <div className="absolute inset-0" style={{ background: post.coverGradient }} />
           )}
