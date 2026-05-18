@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { assetUrl } from '@/lib/utils'
 import type { Bookmark } from '@/lib/types'
 
 export function BookmarkCard({ bookmark, index }: { bookmark: Bookmark; index: number }) {
@@ -10,7 +11,7 @@ export function BookmarkCard({ bookmark, index }: { bookmark: Bookmark; index: n
           {bookmark.coverImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={bookmark.coverImage}
+              src={assetUrl(bookmark.coverImage)}
               alt={bookmark.title}
               className="absolute inset-0 w-full h-full object-cover"
             />

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { formatDate } from '@/lib/utils'
+import { formatDate, assetUrl } from '@/lib/utils'
 import type { Post } from '@/lib/types'
 
 interface Props {
@@ -34,7 +34,7 @@ export function BlogCard({ post, size = 'md' }: Props) {
           {post.coverImage ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={post.coverImage}
+              src={assetUrl(post.coverImage)}
               alt={post.title}
               className="absolute inset-0 w-full h-full object-cover"
             />

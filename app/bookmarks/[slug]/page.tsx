@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft, Star, ExternalLink } from 'lucide-react'
+import { assetUrl } from '@/lib/utils'
 import { Nav } from '@/components/nav'
 import { Footer } from '@/components/footer'
 import { bookmarks } from '@/content/bookmarks/data'
@@ -46,7 +47,7 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
             {book.coverImage ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={book.coverImage}
+                src={assetUrl(book.coverImage)}
                 alt={book.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />

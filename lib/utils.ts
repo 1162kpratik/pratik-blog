@@ -12,3 +12,7 @@ export function formatDate(dateStr: string): string {
     year: 'numeric',
   })
 }
+
+export function assetUrl(src: string): string {
+  return `${process.env.NEXT_PUBLIC_BASE_PATH || ''}${src}`
+}

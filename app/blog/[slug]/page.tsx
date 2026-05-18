@@ -6,7 +6,7 @@ import { Nav } from '@/components/nav'
 import { SocialLinks } from '@/components/social-links'
 import { Footer } from '@/components/footer'
 import { getAllPosts, getPostBySlug } from '@/lib/mdx'
-import { formatDate } from '@/lib/utils'
+import { formatDate, assetUrl } from '@/lib/utils'
 import type { Metadata } from 'next'
 
 type Params = Promise<{ slug: string }>
@@ -69,7 +69,7 @@ export default async function BlogPost({ params }: { params: Params }) {
             {post.coverImage ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={post.coverImage}
+                src={assetUrl(post.coverImage)}
                 alt={post.title}
                 className="absolute inset-0 w-full h-full object-cover"
               />
