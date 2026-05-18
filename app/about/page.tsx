@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import { assetUrl } from '@/lib/utils'
 import { Nav } from '@/components/nav'
 import { SocialLinks } from '@/components/social-links'
 import { Footer } from '@/components/footer'
@@ -16,12 +16,11 @@ export default function AboutPage() {
       <main>
         {/* Hero — full-bleed photo with name overlay */}
         <div className="relative w-full overflow-hidden" style={{ height: '85vh' }}>
-          <Image
-            src="/images/pratik.jpeg"
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={assetUrl('/images/pratik.jpeg')}
             alt="Pratik Kale"
-            fill
-            priority
-            className="object-cover"
+            className="absolute inset-0 w-full h-full object-cover"
             style={{ objectPosition: 'center 18%' }}
           />
           {/* Gradient only at the bottom so face stays fully visible */}
