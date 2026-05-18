@@ -14,7 +14,7 @@ export function SocialLinks() {
       <div className="mx-auto max-w-container px-gutter">
         {/* Orange pill label */}
         <div className="flex justify-center mb-7">
-          <span className="bg-accent text-black font-mono font-bold text-[11px] uppercase tracking-[0.15em] px-5 py-2 rounded-full">
+          <span className="bg-accent text-white font-mono font-bold text-[11px] uppercase tracking-[0.15em] px-5 py-2 rounded-full">
             Follow Me Elsewhere
           </span>
         </div>

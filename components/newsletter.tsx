@@ -42,7 +42,7 @@ export function Newsletter() {
               />
               <button
                 type="submit"
-                className="flex-shrink-0 bg-accent text-black font-display font-bold text-[13px] tracking-[-0.01em] px-6 py-2.5 rounded-full hover:brightness-110 active:scale-95 transition-all duration-150"
+                className="flex-shrink-0 bg-accent text-white font-display font-bold text-[13px] tracking-[-0.01em] px-6 py-2.5 rounded-full hover:brightness-110 active:scale-95 transition-all duration-150"
               >
                 Subscribe
               </button>
