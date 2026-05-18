@@ -1,10 +1,8 @@
 import { notFound } from 'next/navigation'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import remarkGfm from 'remark-gfm'
-import rehypeSlug from 'rehype-slug'
-import Image from 'next/image'
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft } from 'lucide-react'
+import { marked } from 'marked'
 import { Nav } from '@/components/nav'
 import { SocialLinks } from '@/components/social-links'
 import { Footer } from '@/components/footer'
@@ -32,6 +30,8 @@ export default async function BlogPost({ params }: { params: Params }) {
   const { slug } = await params
   const post = getPostBySlug(slug)
   if (!post) notFound()
+
+  const htmlContent = marked.parse(post.content) as string
 
   return (
     <>
@@ -80,19 +80,12 @@ export default async function BlogPost({ params }: { params: Params }) {
             )}
           </div>
 
-          {/* MDX Content */}
+          {/* Content */}
           <div className="max-w-reading mx-auto">
-            <article className="prose prose-midnight max-w-none">
-              <MDXRemote
-                source={post.content}
-                options={{
-                  mdxOptions: {
-                    remarkPlugins: [remarkGfm],
-                    rehypePlugins: [rehypeSlug],
-                  },
-                }}
-              />
-            </article>
+            <article
+              className="prose prose-midnight max-w-none"
+              dangerouslySetInnerHTML={{ __html: htmlContent }}
+            />
 
             {/* Tags */}
             {post.tags.length > 0 && (
