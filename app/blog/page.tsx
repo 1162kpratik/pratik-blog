@@ -12,7 +12,8 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   const posts = getAllPosts()
-  const [featured, ...rest] = posts
+  const featured = posts.find((p) => p.featured) ?? posts[0]
+  const rest = posts.filter((p) => p.slug !== featured?.slug)
   const medium = rest.slice(0, 2)
   const small = rest.slice(2)
 
@@ -21,12 +22,11 @@ export default function BlogPage() {
       <Nav />
       <main className="pt-24 pb-section">
         <div className="mx-auto max-w-container px-gutter">
-          {/* Page heading */}
           <h1 className="font-display font-bold text-headline-lg text-white tracking-[-0.02em] mb-12">
             Blogs
           </h1>
 
-          {/* Featured post */}
+          {/* Featured post — pinned by featured: true flag */}
           {featured && (
             <div className="mb-8">
               <BlogCardFeatured post={featured} />
