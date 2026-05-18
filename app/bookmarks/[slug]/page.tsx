@@ -49,6 +49,7 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
                 src={book.coverImage}
                 alt={book.title}
                 fill
+                sizes="100vw"
                 className="object-cover"
                 priority
               />

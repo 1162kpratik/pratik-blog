@@ -13,6 +13,7 @@ export function BookmarkCard({ bookmark, index }: { bookmark: Bookmark; index: n
               src={bookmark.coverImage}
               alt={bookmark.title}
               fill
+              sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover"
             />
           ) : (

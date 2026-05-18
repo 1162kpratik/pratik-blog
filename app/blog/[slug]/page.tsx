@@ -72,6 +72,7 @@ export default async function BlogPost({ params }: { params: Params }) {
                 src={post.coverImage}
                 alt={post.title}
                 fill
+                sizes="100vw"
                 className="object-cover"
                 priority
               />

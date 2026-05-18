@@ -10,7 +10,7 @@ export function BlogCardFeatured({ post }: { post: Post }) {
         {/* Cover — full width, taller */}
         <div className="relative h-[340px] w-full overflow-hidden">
           {post.coverImage ? (
-            <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
+            <Image src={post.coverImage} alt={post.title} fill sizes="100vw" className="object-cover" />
           ) : (
             <div className="absolute inset-0" style={{ background: post.coverGradient }} />
           )}

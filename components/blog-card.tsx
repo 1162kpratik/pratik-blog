@@ -33,7 +33,7 @@ export function BlogCard({ post, size = 'md' }: Props) {
         {/* Cover */}
         <div className="relative h-52 flex-shrink-0 overflow-hidden">
           {post.coverImage ? (
-            <Image src={post.coverImage} alt={post.title} fill className="object-cover" />
+            <Image src={post.coverImage} alt={post.title} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
           ) : (
             <div className="absolute inset-0" style={{ background: post.coverGradient }} />
           )}
