@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
-import { marked } from 'marked'
+import { markdownToHtml } from '@/lib/markdown'
 import { Nav } from '@/components/nav'
 import { SocialLinks } from '@/components/social-links'
 import { Footer } from '@/components/footer'
@@ -30,7 +30,7 @@ export default async function BlogPost({ params }: { params: Params }) {
   const post = getPostBySlug(slug)
   if (!post) notFound()
 
-  const htmlContent = marked.parse(post.content) as string
+  const htmlContent = markdownToHtml(post.content)
 
   return (
     <>
