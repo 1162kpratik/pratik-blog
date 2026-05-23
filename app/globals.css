@@ -3,20 +3,8 @@
 @tailwind utilities;
 
 @layer base {
-  /* Light mode (default) */
-  :root {
-    --color-accent: #F97316;
-    --color-level-0: #f9f9f7;
-    --color-level-1: #f0efec;
-    --color-level-2: #e3e2de;
-    --color-on-surface: #1a1a1a;
-    --color-on-surface-variant: #4b5563;
-    --color-zinc-muted: #71717a;
-    --color-border-subtle: #e3e2de;
-    --color-border-mid: #d0cfcb;
-  }
-
-  /* Dark mode */
+  /* Dark mode — default */
+  :root,
   .dark {
     --color-accent: #F97316;
     --color-level-0: #000000;
@@ -27,6 +15,19 @@
     --color-zinc-muted: #a1a1aa;
     --color-border-subtle: #1a1a1a;
     --color-border-mid: #2a2a2a;
+  }
+
+  /* Light mode */
+  .light {
+    --color-accent: #F97316;
+    --color-level-0: #f9f9f7;
+    --color-level-1: #f0efec;
+    --color-level-2: #e3e2de;
+    --color-on-surface: #1a1a1a;
+    --color-on-surface-variant: #4b5563;
+    --color-zinc-muted: #71717a;
+    --color-border-subtle: #e3e2de;
+    --color-border-mid: #d0cfcb;
   }
 
   html {
