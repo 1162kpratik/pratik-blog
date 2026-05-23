@@ -61,7 +61,7 @@ export function Nav() {
         {/* Left — logo */}
         <Link href="/" className="flex items-center gap-2 group w-fit">
           <span className="text-base leading-none">⚡</span>
-          <span className="font-display font-semibold text-[13px] tracking-[-0.01em] text-on-surface">
+          <span className="hidden md:inline font-display font-semibold text-[13px] tracking-[-0.01em] text-on-surface">
             Pratik Kale
           </span>
         </Link>
