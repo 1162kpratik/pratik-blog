@@ -5,46 +5,13 @@ import { useState } from 'react'
 export function Newsletter() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
 
-  async function handleSubmit(e: { preventDefault(): void }) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     if (!email.trim()) return
-
-    const apiKey = process.env.NEXT_PUBLIC_RESEND_API_KEY
-    const audienceId = process.env.NEXT_PUBLIC_RESEND_AUDIENCE_ID
-
-    if (!apiKey || !audienceId) {
-      setSubmitted(true)
-      setEmail('')
-      return
-    }
-
-    setLoading(true)
-    setError(false)
-
-    try {
-      const res = await fetch(`https://api.resend.com/audiences/${audienceId}/contacts`, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiKey}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email: email.trim(), unsubscribed: false }),
-      })
-
-      if (res.ok) {
-        setSubmitted(true)
-        setEmail('')
-      } else {
-        setError(true)
-      }
-    } catch {
-      setError(true)
-    } finally {
-      setLoading(false)
-    }
+    // TODO: wire to your mailing list provider (ConvertKit, Resend, Mailchimp, etc.)
+    setSubmitted(true)
+    setEmail('')
   }
 
   return (
@@ -64,31 +31,22 @@ export function Newsletter() {
               You&apos;re in — talk soon.
             </p>
           ) : (
-            <>
-              <form onSubmit={handleSubmit} className="flex items-center gap-2 max-w-[380px] mx-auto">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email"
-                  required
-                  disabled={loading}
-                  className="flex-1 min-w-0 bg-level-0 border border-border-mid rounded-full px-5 py-2.5 font-body text-body-md text-on-surface placeholder:text-zinc-muted placeholder:opacity-50 focus:outline-none focus:border-accent transition-colors duration-150 disabled:opacity-50"
-                />
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="flex-shrink-0 bg-accent text-white font-display font-bold text-[13px] tracking-[-0.01em] px-6 py-2.5 rounded-full hover:brightness-110 active:scale-95 transition-all duration-150 disabled:opacity-70 disabled:cursor-not-allowed"
-                >
-                  {loading ? 'Subscribing…' : 'Subscribe'}
-                </button>
-              </form>
-              {error && (
-                <p className="font-mono text-label-sm uppercase tracking-[0.08em] text-red-400 mt-4">
-                  Something went wrong — please try again.
-                </p>
-              )}
-            </>
+            <form onSubmit={handleSubmit} className="flex items-center gap-2 max-w-[380px] mx-auto">
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Enter your email"
+                required
+                className="flex-1 min-w-0 bg-level-0 border border-border-mid rounded-full px-5 py-2.5 font-body text-body-md text-on-surface placeholder:text-zinc-muted placeholder:opacity-50 focus:outline-none focus:border-white transition-colors duration-150"
+              />
+              <button
+                type="submit"
+                className="flex-shrink-0 bg-accent text-white font-display font-bold text-[13px] tracking-[-0.01em] px-6 py-2.5 rounded-full hover:brightness-110 active:scale-95 transition-all duration-150"
+              >
+                Subscribe
+              </button>
+            </form>
           )}
         </div>
       </div>

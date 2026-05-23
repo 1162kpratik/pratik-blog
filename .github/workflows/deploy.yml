@@ -34,8 +34,6 @@ jobs:
         run: npm run build
         env:
           DEPLOY_TARGET: github
-          NEXT_PUBLIC_RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          NEXT_PUBLIC_RESEND_AUDIENCE_ID: ${{ secrets.RESEND_AUDIENCE_ID }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
