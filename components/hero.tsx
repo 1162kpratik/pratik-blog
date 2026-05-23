@@ -9,7 +9,7 @@ export function Hero() {
         <p className="font-body text-body-lg text-on-surface-variant leading-[1.8] max-w-[500px]">
           Hi, I&apos;m Pratik. I work in the world of Engineering and Smart Buildings but
           I&apos;ve always been equally drawn toward Stories, Art, Ideas and Philosophy.
-          This blog is where both sides of me coexist.
+          This place is where both sides of me coexist.
         </p>
       </div>
     </section>
