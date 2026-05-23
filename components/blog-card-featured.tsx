@@ -18,7 +18,7 @@ export function BlogCardFeatured({ post }: { post: Post }) {
           ) : (
             <div className="absolute inset-0" style={{ background: post.coverGradient }} />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-level-1 via-level-1/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         </div>
 
         {/* Content */}

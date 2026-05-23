@@ -11,18 +11,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand accent
-        accent: '#F97316',
-
-        // Midnight Editorial elevation levels (dark-mode values)
-        'level-0': '#000000',
-        'level-1': '#0a0a0a',
-        'level-2': '#1a1a1a',
-        'on-surface': '#e2e2e2',
-        'on-surface-variant': '#c4c7c8',
-        'zinc-muted': '#a1a1aa',
-        'border-subtle': '#1a1a1a',
-        'border-mid': '#2a2a2a',
+        accent: 'var(--color-accent)',
+        'level-0': 'var(--color-level-0)',
+        'level-1': 'var(--color-level-1)',
+        'level-2': 'var(--color-level-2)',
+        'on-surface': 'var(--color-on-surface)',
+        'on-surface-variant': 'var(--color-on-surface-variant)',
+        'zinc-muted': 'var(--color-zinc-muted)',
+        'border-subtle': 'var(--color-border-subtle)',
+        'border-mid': 'var(--color-border-mid)',
       },
 
       fontFamily: {
@@ -64,21 +61,21 @@ const config: Config = {
       typography: {
         midnight: {
           css: {
-            '--tw-prose-body': '#c4c7c8',
-            '--tw-prose-headings': '#ffffff',
-            '--tw-prose-links': '#F97316',
-            '--tw-prose-bold': '#e2e2e2',
-            '--tw-prose-counters': '#a1a1aa',
-            '--tw-prose-bullets': '#444748',
-            '--tw-prose-hr': '#1a1a1a',
-            '--tw-prose-quotes': '#c4c7c8',
-            '--tw-prose-quote-borders': '#444748',
-            '--tw-prose-captions': '#a1a1aa',
-            '--tw-prose-code': '#e2e2e2',
-            '--tw-prose-pre-code': '#e2e2e2',
-            '--tw-prose-pre-bg': '#0a0a0a',
-            '--tw-prose-th-borders': '#2a2a2a',
-            '--tw-prose-td-borders': '#1a1a1a',
+            '--tw-prose-body': 'var(--color-on-surface-variant)',
+            '--tw-prose-headings': 'var(--color-on-surface)',
+            '--tw-prose-links': 'var(--color-accent)',
+            '--tw-prose-bold': 'var(--color-on-surface)',
+            '--tw-prose-counters': 'var(--color-zinc-muted)',
+            '--tw-prose-bullets': 'var(--color-border-mid)',
+            '--tw-prose-hr': 'var(--color-border-subtle)',
+            '--tw-prose-quotes': 'var(--color-on-surface-variant)',
+            '--tw-prose-quote-borders': 'var(--color-border-mid)',
+            '--tw-prose-captions': 'var(--color-zinc-muted)',
+            '--tw-prose-code': 'var(--color-on-surface)',
+            '--tw-prose-pre-code': 'var(--color-on-surface)',
+            '--tw-prose-pre-bg': 'var(--color-level-1)',
+            '--tw-prose-th-borders': 'var(--color-border-mid)',
+            '--tw-prose-td-borders': 'var(--color-border-subtle)',
             fontFamily: 'var(--font-body), system-ui, sans-serif',
             fontSize: '18px',
             lineHeight: '1.8',

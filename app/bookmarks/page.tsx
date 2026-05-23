@@ -17,7 +17,7 @@ export default function BookmarksPage() {
         <div className="mx-auto max-w-container px-gutter">
           {/* Header */}
           <div className="mb-12">
-            <h1 className="font-display font-bold text-headline-lg text-white tracking-[-0.02em] mb-4">
+            <h1 className="font-display font-bold text-headline-lg text-on-surface tracking-[-0.02em] mb-4">
               Bookmarks
             </h1>
             <p className="font-body text-body-lg text-on-surface-variant max-w-[520px]">

@@ -40,7 +40,7 @@ export default async function BlogPost({ params }: { params: Params }) {
           {/* Back link */}
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted hover:text-white transition-colors duration-150 mb-12 group"
+            className="inline-flex items-center gap-2 font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted hover:text-on-surface transition-colors duration-150 mb-12 group"
           >
             <ArrowLeft
               size={12}
@@ -54,12 +54,12 @@ export default async function BlogPost({ params }: { params: Params }) {
             <p className="font-mono text-label-sm uppercase tracking-[0.1em] text-accent mb-4">
               {post.category}
             </p>
-            <h1 className="font-display font-bold text-[36px] md:text-headline-lg text-white leading-[1.15] tracking-[-0.025em] mb-5">
+            <h1 className="font-display font-bold text-[36px] md:text-headline-lg text-on-surface leading-[1.15] tracking-[-0.025em] mb-5">
               {post.title}
             </h1>
             <div className="flex items-center gap-4 text-zinc-muted font-mono text-label-sm uppercase tracking-[0.06em]">
               <span>{formatDate(post.date)}</span>
-              <span className="w-[3px] h-[3px] rounded-full bg-zinc-muted/50" />
+              <span className="w-[3px] h-[3px] rounded-full bg-zinc-muted opacity-50" />
               <span>{post.readTime}</span>
             </div>
           </div>

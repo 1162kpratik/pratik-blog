@@ -22,7 +22,7 @@ export default function BlogPage() {
       <Nav />
       <main className="pt-24 pb-section">
         <div className="mx-auto max-w-container px-gutter">
-          <h1 className="font-display font-bold text-headline-lg text-white tracking-[-0.02em] mb-12">
+          <h1 className="font-display font-bold text-headline-lg text-on-surface tracking-[-0.02em] mb-12">
             Blogs
           </h1>
 

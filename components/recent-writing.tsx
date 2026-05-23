@@ -10,12 +10,12 @@ export function RecentWriting() {
     <section className="pb-section">
       <div className="mx-auto max-w-container px-gutter">
         <div className="flex items-center justify-between mb-element">
-          <h2 className="font-display font-bold text-[28px] md:text-headline-lg text-white tracking-[-0.02em]">
+          <h2 className="font-display font-bold text-[28px] md:text-headline-lg text-on-surface tracking-[-0.02em]">
             Recent Writing
           </h2>
           <Link
             href="/blog"
-            className="flex items-center gap-1.5 font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted hover:text-white transition-colors duration-150 group"
+            className="flex items-center gap-1.5 font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted hover:text-on-surface transition-colors duration-150 group"
           >
             View All
             <ArrowRight

@@ -15,10 +15,10 @@ export function BlogCard({ post, size = 'md' }: Props) {
           <p className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted mb-3">
             {formatDate(post.date)}
           </p>
-          <h3 className="font-display font-bold text-[18px] text-white mb-3 leading-[1.3] group-hover:text-accent transition-colors duration-200">
+          <h3 className="font-display font-bold text-[18px] text-on-surface mb-3 leading-[1.3] group-hover:text-accent transition-colors duration-200">
             {post.title}
           </h3>
-          <span className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted group-hover:text-white transition-colors duration-150">
+          <span className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted group-hover:text-on-surface transition-colors duration-150">
             {post.readTime} →
           </span>
         </article>
@@ -41,7 +41,7 @@ export function BlogCard({ post, size = 'md' }: Props) {
           ) : (
             <div className="absolute inset-0" style={{ background: post.coverGradient }} />
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-level-1 via-level-1/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
         </div>
 
         {/* Content */}
@@ -49,13 +49,13 @@ export function BlogCard({ post, size = 'md' }: Props) {
           <p className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted mb-3">
             {post.category} &nbsp;·&nbsp; {formatDate(post.date)}
           </p>
-          <h3 className="font-display font-bold text-headline-md text-white mb-3 leading-[1.3] group-hover:text-accent transition-colors duration-200">
+          <h3 className="font-display font-bold text-headline-md text-on-surface mb-3 leading-[1.3] group-hover:text-accent transition-colors duration-200">
             {post.title}
           </h3>
           <p className="font-body text-body-md text-on-surface-variant leading-[1.6] line-clamp-3 mb-6 flex-1">
             {post.excerpt}
           </p>
-          <span className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted group-hover:text-white transition-colors duration-150 mt-auto">
+          <span className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted group-hover:text-on-surface transition-colors duration-150 mt-auto">
             {post.readTime} →
           </span>
         </div>
