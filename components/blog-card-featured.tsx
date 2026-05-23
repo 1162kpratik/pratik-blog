@@ -26,7 +26,7 @@ export function BlogCardFeatured({ post }: { post: Post }) {
           <p className="font-mono text-label-sm uppercase tracking-[0.1em] text-zinc-muted mb-4">
             {post.category}&nbsp;&nbsp;·&nbsp;&nbsp;{formatDate(post.date)}&nbsp;&nbsp;·&nbsp;&nbsp;{post.readTime}
           </p>
-          <h2 className="font-display font-bold text-[28px] md:text-headline-lg text-white leading-[1.2] tracking-[-0.02em] group-hover:text-accent transition-colors duration-200 max-w-reading">
+          <h2 className="font-display font-bold text-[28px] md:text-headline-lg text-on-surface leading-[1.2] tracking-[-0.02em] group-hover:text-accent transition-colors duration-200 max-w-reading">
             {post.title}
           </h2>
         </div>
