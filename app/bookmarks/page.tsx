@@ -5,7 +5,7 @@ import { bookmarks } from '@/content/bookmarks/data'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Bookmarks — Pratik Kale',
+  title: 'Bookmarks - Pratik Kale',
   description: 'Notes and reflections on the best books I\'ve read.',
 }
 

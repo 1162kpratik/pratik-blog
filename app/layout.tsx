@@ -25,9 +25,9 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Pratik Kale — Ideas across Tech, Creativity & Life',
+  title: 'Pratik Kale - Ideas across Tech, Creativity & Life',
   description:
-    'A personal blog exploring engineering, smart buildings, stories, art, and philosophy.',
+    'A personal blog exploring engineering, smart buildings, stories, art and philosophy.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

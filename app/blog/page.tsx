@@ -6,7 +6,7 @@ import { getAllPosts } from '@/lib/mdx'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Blogs — Pratik Kale',
+  title: 'Blogs - Pratik Kale',
   description: 'Essays and reflections on tech, creativity, engineering, and life.',
 }
 

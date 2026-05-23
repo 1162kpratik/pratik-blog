@@ -5,7 +5,7 @@ import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About — Pratik Kale',
+  title: 'About - Pratik Kale',
   description: 'Engineer, thinker, and writer exploring ideas across tech, creativity, and life.',
 }
 
