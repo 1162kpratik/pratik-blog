@@ -67,7 +67,7 @@ export function Nav() {
         </Link>
 
         {/* Center — nav links */}
-        <nav className="flex items-center justify-center gap-8">
+        <nav className="flex items-center justify-center gap-4 md:gap-8">
           {NAV_LINKS.map(({ label, href }) => {
             const active = isActive(href)
             return (
@@ -75,8 +75,8 @@ export function Nav() {
                 key={href}
                 href={href}
                 className={`relative font-mono text-[11px] font-medium uppercase tracking-[0.08em] transition-colors duration-150 group pb-0.5 ${
-                  active ? 'text-on-surface' : 'text-zinc-muted hover:text-on-surface'
-                }`}
+                  href === '/' ? 'hidden md:inline-flex' : ''
+                } ${active ? 'text-on-surface' : 'text-zinc-muted hover:text-on-surface'}`}
               >
                 {label}
                 {/* Orange underline — scales in from left */}
