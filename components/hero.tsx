@@ -6,7 +6,7 @@ export function Hero() {
       <div className="mx-auto max-w-container px-gutter w-full flex flex-col items-center">
 
         {/* Avatar with wink on hover */}
-        <div className="relative w-20 h-20 mb-8 cursor-pointer group">
+        <div className="relative w-32 h-32 mb-8 cursor-pointer group">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={assetUrl('/images/Normal Face.png')}
