@@ -1,7 +1,26 @@
+import { assetUrl } from '@/lib/utils'
+
 export function Hero() {
   return (
     <section className="min-h-[50vh] flex flex-col items-center justify-center pt-32 pb-12 text-center">
       <div className="mx-auto max-w-container px-gutter w-full flex flex-col items-center">
+
+        {/* Avatar with wink on hover */}
+        <div className="relative w-20 h-20 mb-8 cursor-pointer group">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={assetUrl('/images/Normal Face.png')}
+            alt="Pratik"
+            className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={assetUrl('/images/Wink face.png')}
+            alt="Pratik winking"
+            className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+          />
+        </div>
+
         <h1 className="font-display font-bold text-[40px] md:text-[56px] lg:text-display-xl leading-[1.08] tracking-[-0.04em] mb-7 max-w-[780px]">
           <span className="text-on-surface">Exploring Ideas across </span>
           <span className="text-accent">Tech, Creativity &amp; Life.</span>
