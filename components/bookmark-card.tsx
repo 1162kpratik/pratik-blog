@@ -24,9 +24,12 @@ export function BookmarkCard({ bookmark }: { bookmark: Bookmark }) {
         <h3 className="font-display font-bold text-[13px] text-on-surface leading-[1.3] mb-0.5 line-clamp-2 group-hover:text-accent transition-colors duration-200">
           {bookmark.title}
         </h3>
-        <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-zinc-muted">
+        <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-zinc-muted mb-1">
           {bookmark.author}
         </p>
+        <span className="font-mono text-[10px] uppercase tracking-[0.08em] text-accent group-hover:underline transition-colors duration-150">
+          Read Notes →
+        </span>
       </div>
     </Link>
   )
