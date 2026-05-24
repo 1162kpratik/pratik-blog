@@ -2,7 +2,7 @@ import { assetUrl } from '@/lib/utils'
 
 export function Hero() {
   return (
-    <section className="min-h-[50vh] flex flex-col items-center justify-center pt-20 pb-12 text-center">
+    <section className="min-h-[50vh] flex flex-col items-center justify-center pt-32 pb-12 text-center">
       <div className="mx-auto max-w-container px-gutter w-full flex flex-col items-center">
 
         {/* Avatar with wink on hover */}
