@@ -118,9 +118,10 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
                       key={i}
                       className="border-l-2 border-accent pl-5 py-1"
                     >
-                      <p className="font-body text-body-lg text-on-surface-variant leading-[1.8] italic">
-                        &ldquo;{quote}&rdquo;
-                      </p>
+                      <p
+                        className="font-body text-body-lg text-on-surface-variant leading-[1.8] italic"
+                        dangerouslySetInnerHTML={{ __html: `&ldquo;${quote}&rdquo;` }}
+                      />
                     </blockquote>
                   ))}
                 </div>
@@ -135,9 +136,10 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
                 <h2 className="font-display font-bold text-headline-md text-on-surface tracking-[-0.01em] mb-5">
                   Who Should Read It?
                 </h2>
-                <p className="font-body text-body-lg text-on-surface-variant leading-[1.85]">
-                  {book.whoShouldRead}
-                </p>
+                <p
+                  className="font-body text-body-lg text-on-surface-variant leading-[1.85]"
+                  dangerouslySetInnerHTML={{ __html: book.whoShouldRead }}
+                />
               </section>
             )}
 
@@ -151,9 +153,11 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
                 </h2>
                 <div className="space-y-6">
                   {book.notesAndSummary.map((para, i) => (
-                    <p key={i} className="font-body text-body-lg text-on-surface-variant leading-[1.85]">
-                      {para}
-                    </p>
+                    <p
+                      key={i}
+                      className="font-body text-body-lg text-on-surface-variant leading-[1.85]"
+                      dangerouslySetInnerHTML={{ __html: para }}
+                    />
                   ))}
                 </div>
               </section>

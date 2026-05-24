@@ -41,6 +41,13 @@
     font-family: var(--font-body), system-ui, sans-serif;
   }
 
+  mark {
+    background-color: #F97316;
+    color: #000;
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+
   ::-webkit-scrollbar { width: 4px; }
   ::-webkit-scrollbar-track { background: var(--color-level-0); }
   ::-webkit-scrollbar-thumb { background: var(--color-level-2); border-radius: 2px; }
