@@ -40,7 +40,7 @@ export default function AboutPage() {
         </div>
 
         {/* Bio */}
-        <section className="py-section">
+        <section className="pt-8 pb-section">
           <div className="mx-auto max-w-container px-gutter">
             <div className="max-w-reading space-y-7">
               {[
