@@ -42,38 +42,41 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
             All Books
           </Link>
 
-          {/* ── Book Cover ── */}
-          <div className="relative w-full h-[320px] md:h-[420px] rounded-lg overflow-hidden mb-10 flex items-end">
-            {book.coverImage ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={assetUrl(book.coverImage)}
-                alt={book.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            ) : (
-              <div className="absolute inset-0" style={{ background: book.coverGradient }} />
-            )}
-            <div className="relative z-10 p-8 md:p-10 w-full bg-gradient-to-t from-black/80 to-transparent">
-              <p className="font-mono text-label-sm uppercase tracking-[0.1em] text-accent mb-2">
+          {/* ── Hero: Book Cover (left) + Meta (right) ── */}
+          <div className="flex flex-col md:flex-row gap-10 mb-14 pb-10 border-b border-border-subtle">
+
+            {/* Book cover — portrait rectangle */}
+            <div className="flex-shrink-0 w-48 md:w-56 mx-auto md:mx-0">
+              <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden shadow-2xl">
+                {book.coverImage ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={assetUrl(book.coverImage)}
+                    alt={book.title}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                ) : (
+                  <div className="absolute inset-0" style={{ background: book.coverGradient }} />
+                )}
+              </div>
+            </div>
+
+            {/* Meta — author, title, rating, link */}
+            <div className="flex flex-col justify-center gap-4">
+              <p className="font-mono text-label-sm uppercase tracking-[0.12em] text-accent">
                 {book.author}
               </p>
-              <h1 className="font-display font-bold text-[28px] md:text-headline-lg text-white leading-[1.2] tracking-[-0.02em]">
+              <h1 className="font-display font-bold text-[28px] md:text-headline-lg text-on-surface leading-[1.2] tracking-[-0.02em]">
                 {book.title}
               </h1>
-            </div>
-          </div>
 
-          {/* ── Meta row: Goodreads rating + link ── */}
-          {(book.goodreadsRating ?? book.goodreadsUrl) && (
-            <div className="flex flex-wrap items-center gap-6 mb-14 pb-10 border-b border-border-subtle">
               {book.goodreadsRating && (
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-0.5">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
-                        size={14}
+                        size={15}
                         className={
                           i < Math.round(book.goodreadsRating!)
                             ? 'text-amber-400 fill-amber-400'
@@ -87,19 +90,20 @@ export default async function BookmarkDetailPage({ params }: { params: Params })
                   </span>
                 </div>
               )}
+
               {book.goodreadsUrl && (
                 <a
                   href={book.goodreadsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 font-mono text-label-sm uppercase tracking-[0.08em] text-accent hover:underline"
+                  className="inline-flex items-center gap-1.5 font-mono text-label-sm uppercase tracking-[0.08em] text-accent hover:underline w-fit"
                 >
                   View on Goodreads
                   <ExternalLink size={11} />
                 </a>
               )}
             </div>
-          )}
+          </div>
 
           <div className="max-w-reading">
             {/* ── My Favourite Quotes ── */}
