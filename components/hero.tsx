@@ -5,20 +5,31 @@ export function Hero() {
     <section className="min-h-[50vh] flex flex-col items-center justify-center pt-32 pb-12 text-center">
       <div className="mx-auto max-w-container px-gutter w-full flex flex-col items-center">
 
-        {/* Avatar with wink on hover */}
-        <div className="relative w-32 h-32 mb-8 cursor-pointer group">
+        {/* Avatar with light leak background and wink on hover */}
+        <div className="relative flex items-center justify-center mb-8 cursor-pointer group w-64 h-64">
+          {/* Light leak background — centered, fills container */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={assetUrl('/images/Normal Face.png')}
-            alt="Pratik"
-            className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+            src={assetUrl('/images/Light Leak BG.png')}
+            alt=""
+            aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-contain pointer-events-none select-none"
           />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={assetUrl('/images/Wink face.png')}
-            alt="Pratik winking"
-            className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-200 opacity-0 group-hover:opacity-100"
-          />
+          {/* Avatar — centered inside the container */}
+          <div className="relative w-32 h-32 z-10">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={assetUrl('/images/Normal Face.png')}
+              alt="Pratik"
+              className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-200 opacity-100 group-hover:opacity-0"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={assetUrl('/images/Wink face.png')}
+              alt="Pratik winking"
+              className="absolute inset-0 w-full h-full object-cover rounded-full transition-opacity duration-200 opacity-0 group-hover:opacity-100"
+            />
+          </div>
         </div>
 
         <h1 className="font-display font-bold text-[40px] md:text-[56px] lg:text-display-xl leading-[1.08] tracking-[-0.04em] mb-7 max-w-[780px]">
