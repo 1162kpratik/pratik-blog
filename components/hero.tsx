@@ -6,7 +6,7 @@ export function Hero() {
       <div className="mx-auto max-w-container px-gutter w-full flex flex-col items-center">
 
         {/* Avatar with light leak background and wink on hover */}
-        <div className="relative flex items-center justify-center mb-3 cursor-pointer group w-64 h-64">
+        <div className="relative flex items-center justify-center mb-0 cursor-pointer group w-64 h-64">
           {/* Light leak background — centered, fills container */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
