@@ -6,7 +6,7 @@ export function BookmarkCard({ bookmark }: { bookmark: Bookmark }) {
   return (
     <Link href={`/bookmarks/${bookmark.slug}`} className="group block">
       {/* Portrait book-cover shape — 2:3 aspect ratio */}
-      <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden shadow-md group-hover:shadow-xl transition-shadow duration-300 mb-3">
+      <div className="relative w-full aspect-[2/3] rounded-lg overflow-hidden shadow-md ring-2 ring-transparent group-hover:ring-accent transition-all duration-300 mb-3">
         {bookmark.coverImage ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -27,7 +27,7 @@ export function BookmarkCard({ bookmark }: { bookmark: Bookmark }) {
         <p className="font-mono text-[10px] uppercase tracking-[0.08em] text-zinc-muted mb-1">
           {bookmark.author}
         </p>
-        <span className="font-mono text-[10px] uppercase tracking-[0.08em] text-accent group-hover:underline transition-colors duration-150">
+        <span className="font-mono text-[10px] uppercase tracking-[0.08em] text-accent transition-colors duration-150">
           Read Notes →
         </span>
       </div>
