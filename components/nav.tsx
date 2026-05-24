@@ -75,7 +75,7 @@ export function Nav() {
                 key={href}
                 href={href}
                 className={`relative font-mono text-[11px] font-medium uppercase tracking-[0.08em] transition-colors duration-150 group pb-0.5 ${
-                  href === '/' ? 'hidden md:inline-flex' : ''
+                  href === '/' ? '' : ''
                 } ${active ? 'text-on-surface' : 'text-zinc-muted hover:text-on-surface'}`}
               >
                 {label}
