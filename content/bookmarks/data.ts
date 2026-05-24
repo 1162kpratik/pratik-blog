@@ -152,10 +152,7 @@ export const bookmarks: Bookmark[] = [
       "Quote 3.",
     ],
     whoShouldRead:
-      "Readers who enjoy psychological and existential literature.",
-      "Fans of symbolism and layered storytelling.",
-      "People interested in themes of identity, isolation, and alienation.",
-      "Readers who liked Orwell, Camus, Dostoevsky, or philosophical fiction.",
+      "Readers who enjoy psychological and existential literature. People interested in themes of identity, isolation, and alienation.Readers who liked Orwell, Camus, Dostoevsky, or philosophical fiction.",
     notesAndSummary: [
       
     ],
