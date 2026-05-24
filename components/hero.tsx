@@ -33,7 +33,7 @@ export function Hero() {
         </div>
 
         <h1 className="font-display font-bold text-[40px] md:text-[56px] lg:text-display-xl leading-[1.08] tracking-[-0.04em] mb-7 max-w-[780px]">
-          <span className="text-on-surface">Exploring Ideas across </span>
+          <span className="text-on-surface">Exploring  Ideas  across </span>
           <span className="text-accent">Tech, Creativity &amp; Life.</span>
         </h1>
         <p className="font-body text-body-lg text-on-surface-variant leading-[1.8] max-w-[500px]">

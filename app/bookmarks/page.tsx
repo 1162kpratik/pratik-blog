@@ -22,7 +22,7 @@ export default function BookmarksPage() {
             </h1>
             <p className="font-body text-body-lg text-on-surface-variant max-w-[520px]">
               I enjoy reading and get through more books than I can count. Here&apos;s some of
-              the notes I&apos;ve taken on the best books I&apos;ve read.
+              the notes I&apos;ve taken on the best books I&apos;ve read so far.
             </p>
           </div>
 
