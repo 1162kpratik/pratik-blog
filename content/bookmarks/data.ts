@@ -2,7 +2,7 @@ import type { Bookmark } from '@/lib/types'
 
 export const bookmarks: Bookmark[] = [
   {
-    id: 1,
+    id: 6,
     slug: 'atomic-habits',
     title: 'Atomic Habits',
     author: 'James Clear',
@@ -59,7 +59,7 @@ export const bookmarks: Bookmark[] = [
     ],
   },
   {
-    id: 2,
+    id: 1,
     slug: 'only-dull',
     title: 'Only Dull People Are Brilliant at Breakfast',
     author: 'Oscar Wilde',
@@ -107,7 +107,7 @@ export const bookmarks: Bookmark[] = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     slug: 'mindset',
     title: 'Mindset: The New Psychology of Success',
     author: 'Carol S. Dweck',
@@ -134,7 +134,7 @@ export const bookmarks: Bookmark[] = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     slug: 'metamorphosis',
     title: 'The Metamorphosis',
     author: 'Franz Kafka',
@@ -158,7 +158,7 @@ export const bookmarks: Bookmark[] = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     slug: 'wings',
     title: 'Wings of Fire: An Autobiography',
     author: 'A.P.J. Abdul Kalam',
