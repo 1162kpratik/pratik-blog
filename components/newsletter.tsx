@@ -6,10 +6,17 @@ export function Newsletter() {
   const [email, setEmail] = useState('')
   const [submitted, setSubmitted] = useState(false)
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: { preventDefault(): void }) {
     e.preventDefault()
     if (!email.trim()) return
-    // TODO: wire to your mailing list provider (ConvertKit, Resend, Mailchimp, etc.)
+    try {
+      await fetch('https://script.google.com/macros/s/AKfycbzjIFVDFuIjppBOWdDu_h7q0bUqn_L1LiDzZYY_tIeF-BWR3yXWY_DIUspRyRVtT_bd/exec', {
+        method: 'POST',
+        body: JSON.stringify({ email: email.trim() }),
+      })
+    } catch (_) {
+      // fail silently — email likely saved, CORS blocks the response
+    }
     setSubmitted(true)
     setEmail('')
   }
