@@ -7,14 +7,14 @@
   :root,
   .dark {
     --color-accent: #F97316;
-    --color-level-0: #202123;
-    --color-level-1: #2b2d2f;
-    --color-level-2: #3c3e41;
-    --color-on-surface: #ebebeb;
-    --color-on-surface-variant: #c4c7c8;
-    --color-zinc-muted: #a1a1aa;
-    --color-border-subtle: #2f3133;
-    --color-border-mid: #484b4e;
+    --color-level-0: #0d1117;
+    --color-level-1: #161b22;
+    --color-level-2: #21262d;
+    --color-on-surface: #e6edf3;
+    --color-on-surface-variant: #8b949e;
+    --color-zinc-muted: #6e7681;
+    --color-border-subtle: #21262d;
+    --color-border-mid: #30363d;
   }
 
   /* Light mode */
