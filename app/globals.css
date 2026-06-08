@@ -7,14 +7,14 @@
   :root,
   .dark {
     --color-accent: #F97316;
-    --color-level-0: #000000;
-    --color-level-1: #0a0a0a;
-    --color-level-2: #1a1a1a;
-    --color-on-surface: #e2e2e2;
+    --color-level-0: #383838;
+    --color-level-1: #424242;
+    --color-level-2: #525252;
+    --color-on-surface: #ebebeb;
     --color-on-surface-variant: #c4c7c8;
     --color-zinc-muted: #a1a1aa;
-    --color-border-subtle: #1a1a1a;
-    --color-border-mid: #2a2a2a;
+    --color-border-subtle: #4a4a4a;
+    --color-border-mid: #606060;
   }
 
   /* Light mode */
