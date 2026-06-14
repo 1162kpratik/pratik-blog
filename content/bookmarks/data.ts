@@ -105,14 +105,23 @@ export const bookmarks: Bookmark[] = [
     goodreadsRating: 4.2,
     goodreadsUrl: 'https://www.goodreads.com/book/show/61439040-1984',
     favouriteQuotes: [
-      "Quote 1.",
-      "Quote 2.",
-      "Quote 3.",
+      "Power is in tearing human minds to pieces and putting them together again in new shapes of your own choosing.",
+      "Who controls the past controls the future. Who controls the present controls the past.",
     ],
     whoShouldRead:
-      "Readers interested in politics, dystopian fiction, surveillance, power structures, and philosophy.",
-    notesAndSummary: [
-      
+      "Political science enthusiasts: Anyone interested in the mechanics of totalitarianism, propaganda and state surveillance. Readers interested in dystopian fiction, surveillance, power structures and philosophy.",
+    
+      notesAndSummary: [
+      "Key Themes:",
+"<mark>The Control of Language</mark>: The Party is developing Newspeak, a language designed to diminish the range of human thought. By eliminating words, the Party aims to make <strong>thoughtcrime</strong>  (thinking against the Party) literally impossible because there will be no vocabulary to express it.",
+
+"<mark>The Manipulation of Reality</mark>: Through the Ministry of Truth, the Party constantly rewrites history to match current propaganda. If the Party says a war was won or an ally has changed, the past is altered in newspapers and records, forcing citizens to rely solely on the Party’s version of the truth.",
+
+"<mark>Winston’s Rebellion</mark>: Winston begins a forbidden affair with a woman named Julia and attempts to join an underground resistance movement known as the Brotherhood. His personal rebellion is ultimately an attempt to preserve his own humanity and memory in a world designed to strip both away.",
+
+"<mark>The Tragic End</mark>: The story serves as a cautionary tale rather than a tale of triumph. Winston is eventually captured by the Thought Police and subjected to brutal re-education in the Ministry of Love. The book concludes with the devastating realization that the Party's power to rewrite the human spirit is absolute, forcing Winston to abandon his resistance and finally love Big Brother.",
+
+"The novel is not just a story about a fictional regime; it is a profound exploration of how reality can be manufactured and how truth is vulnerable when independent thought is suppressed.",
     ],
   },
   {
