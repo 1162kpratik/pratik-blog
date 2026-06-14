@@ -15,13 +15,13 @@ export default function AboutPage() {
       <Nav />
       <main>
         {/* Hero — full-bleed photo with name overlay */}
-        <div className="relative w-full overflow-hidden" style={{ height: '70vh' }}>
+        <div className="relative w-full overflow-hidden" style={{ height: '80vh' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={assetUrl('/images/pratik.jpeg')}
             alt="Pratik Kale"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: 'center 10%' }}
+            style={{ objectPosition: 'center 30%' }}
           />
           {/* Gradient only at the bottom so face stays fully visible */}
           <div className="absolute bottom-0 left-0 right-0 h-2/5 bg-gradient-to-t from-black to-transparent" />
