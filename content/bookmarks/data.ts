@@ -138,9 +138,9 @@ export const bookmarks: Bookmark[] = [
     goodreadsRating: 4.0,
     goodreadsUrl: 'https://www.goodreads.com/book/show/40745.Mindset',
     favouriteQuotes: [
-      "Quote 1.",
-      "Quote 2.",
-      "Quote 3.",
+      "The view you adopt for yourself profoundly affects the way you lead your life.",
+      "In the fixed mindset, everything is about the outcome. If you fail or if you're not the best, it's all been wasted. The growth mindset allows people to value what they're doing regardless of the outcome",
+      "Effort is one of those things that gives meaning to life. Effort means you care about something, that something is important to you and you are willing to work for it",
     ],
     whoShouldRead:
       "Students, professionals, educators, athletes and anyone trying to learn, improve or overcome failure.",
@@ -164,11 +164,7 @@ export const bookmarks: Bookmark[] = [
       '',
     goodreadsRating: 3.9,
     goodreadsUrl: 'https://www.goodreads.com/book/show/485894.The_Metamorphosis',
-    favouriteQuotes: [
-      "Quote 1.",
-      "Quote 2.",
-      "Quote 3.",
-    ],
+   
     whoShouldRead:
       "Readers who enjoy psychological and existential literature. People interested in themes of identity, isolation, and alienation.Readers who liked Orwell, Camus, Dostoevsky, or philosophical fiction.",
     notesAndSummary: [
