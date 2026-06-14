@@ -35,7 +35,7 @@ export default async function BlogPost({ params }: { params: Params }) {
   return (
     <>
       <Nav />
-      <main className="pt-28 pb-section">
+      <main className="pt-28">
         <div className="mx-auto max-w-container px-gutter">
           {/* Back link */}
           <Link
