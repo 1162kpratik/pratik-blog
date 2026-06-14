@@ -79,15 +79,15 @@ export const bookmarks: Bookmark[] = [
     whoShouldRead:
       "Fans of wit, literature, philosophy, short reflections and Oscar Wilde’s sharp observations.",
     notesAndSummary: [
-      "This book is not a novel with a plot, it is compact collection of Oscar Wilde's funniest and most thought-provoking remarks about life, art, society and human behavior, offering wit, satire and philosophical insight in just a few pages"
-      "The title <em>Only dull people are brilliant at breakfast</em> is a joke suggests that truly interesting people are not at their best during mundane, everyday situations, an example of Wilde's fondness for turning common assumptions upside down."
-      "His writings reminded me of P L  Deshpande(Marathi writer and humorist from Maharashtra, India)"
-      "The book showcases Wilde's trademark style: clever, ironic, humorous and often paradoxical. Through a series of short sayings and excerpts, he challenges conventional wisdom and social norms. Major themes include:
-      "<mark>The value of individuality</mark> : Wilde celebrates originality and self-expression while mocking conformity.
-      "<mark>Love and marriage</mark> : He offers humorous and often cynical observations about relationships and married life.
-      "<mark>Art and beauty</mark> : He argues that art should be appreciated for its beauty rather than judged by moral standards.
-      "<mark>Society and hypocrisy</mark> : Many passages satirize social conventions, pretension, and Victorian attitudes.
-      "<mark>Human nature</mark> : Wilde explores how people deceive themselves, chase pleasure, and hold contradictory beliefs.
+      "This book is not a novel with a plot, it is compact collection of Oscar Wilde's funniest and most thought-provoking remarks about life, art, society and human behavior, offering wit, satire and philosophical insight in just a few pages",
+      "The title <em> Only dull people are brilliant at breakfast </em> is a joke suggests that truly interesting people are not at their best during mundane, everyday situations, an example of Wilde's fondness for turning common assumptions upside down.",
+      "His writings reminded me of P L  Deshpande(Marathi writer and humorist from Maharashtra, India)",
+      "The book showcases Wilde's trademark style: clever, ironic, humorous and often paradoxical. Through a series of short sayings and excerpts, he challenges conventional wisdom and social norms. Major themes include:",
+      "<mark>The value of individuality</mark> : Wilde celebrates originality and self-expression while mocking conformity.",
+      "<mark>Love and marriage</mark> : He offers humorous and often cynical observations about relationships and married life.",
+      "<mark>Art and beauty</mark> : He argues that art should be appreciated for its beauty rather than judged by moral standards.",
+      "<mark>Society and hypocrisy</mark> : Many passages satirize social conventions, pretension, and Victorian attitudes.",
+      "<mark>Human nature</mark> : Wilde explores how people deceive themselves, chase pleasure, and hold contradictory beliefs.",
       
     ],
   },
