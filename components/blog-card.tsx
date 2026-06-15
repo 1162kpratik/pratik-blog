@@ -11,11 +11,24 @@ export function BlogCard({ post, size = 'md' }: Props) {
   if (size === 'sm') {
     return (
       <Link href={`/blog/${post.slug}`} className="group block">
-        <article className="border-t border-border-subtle pt-6 pb-2">
-          <p className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted mb-3">
+        <article className="border-t border-border-subtle pt-5 pb-5">
+          {/* Cover thumbnail */}
+          <div className="relative w-full h-36 rounded-md overflow-hidden mb-4">
+            {post.coverImage ? (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={assetUrl(post.coverImage)}
+                alt={post.title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            ) : (
+              <div className="absolute inset-0" style={{ background: post.coverGradient }} />
+            )}
+          </div>
+          <p className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted mb-2">
             {formatDate(post.date)}
           </p>
-          <h3 className="font-display font-bold text-[18px] text-on-surface mb-3 leading-[1.3] group-hover:text-accent transition-colors duration-200">
+          <h3 className="font-display font-bold text-[16px] text-on-surface mb-3 leading-[1.3] group-hover:text-accent transition-colors duration-200">
             {post.title}
           </h3>
           <span className="font-mono text-label-sm uppercase tracking-[0.08em] text-zinc-muted group-hover:text-on-surface transition-colors duration-150">
