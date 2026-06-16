@@ -53,8 +53,8 @@ export default function AboutPage() {
 
         {/* Bio card — touches the bottom of the photo */}
         <section className="relative z-10 -mt-10">
-          <div className="mx-auto max-w-2xl px-gutter">
-            <div className="bg-level-1 border border-border-subtle rounded-2xl px-8 md:px-12 py-10 shadow-xl">
+          <div className="mx-auto max-w-4xl px-gutter">
+            <div className="bg-level-1 border border-border-subtle rounded-2xl px-10 md:px-16 py-10 shadow-xl text-center">
               <div className="space-y-6">
                 {[
                   "I don't believe we have to choose between being analytical or creative.",
