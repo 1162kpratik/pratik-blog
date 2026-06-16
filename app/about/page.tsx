@@ -31,7 +31,7 @@ export default function AboutPage() {
             </p>
 
             {/* Photo with light leak background */}
-            <div className="relative flex items-end justify-center w-[340px] h-[340px] md:w-[420px] md:h-[420px]">
+            <div className="relative flex items-center justify-center w-[340px] h-[300px] md:w-[420px] md:h-[360px]">
               {/* Light leak BG */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -45,14 +45,14 @@ export default function AboutPage() {
               <img
                 src={assetUrl('/images/pfpnoBG.png')}
                 alt="Pratik Kale"
-                className="relative z-10 w-[300px] h-[300px] md:w-[380px] md:h-[380px] object-contain object-bottom drop-shadow-2xl"
+                className="relative z-10 w-[300px] h-[300px] md:w-[380px] md:h-[380px] object-contain object-center drop-shadow-2xl"
               />
             </div>
           </div>
         </section>
 
-        {/* Bio card — overlaps the hero */}
-        <section className="relative z-10 -mt-20">
+        {/* Bio card — touches the bottom of the photo */}
+        <section className="relative z-10 -mt-10">
           <div className="mx-auto max-w-2xl px-gutter">
             <div className="bg-level-1 border border-border-subtle rounded-2xl px-8 md:px-12 py-10 shadow-xl">
               <div className="space-y-6">
