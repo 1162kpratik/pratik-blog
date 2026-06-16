@@ -184,15 +184,24 @@ export const bookmarks: Bookmark[] = [
       "",
     goodreadsRating: 4.2,
     goodreadsUrl: 'https://www.goodreads.com/book/show/634583.Wings_of_Fire',
-    favouriteQuotes: [
-      "Quote 1.",
-      "Quote 2.",
-      "Quote 3.",
-    ],
+   
     whoShouldRead:
       "Students, dreamers, young professionals and readers seeking inspiration.",
     notesAndSummary: [
-      
+      "This was the first book I ever truly read as a teenager.Back then, it was just a story to me. A simple one. A boy from Rameswaram, a scientist, rockets, success. I turned pages, but I didn’t really see them.",
+      "I thought I had read the book.",
+      "Years later, I picked it up again and the same words felt different. Kalam’s journey no longer felt like a distant story, it felt close. A boy who came from almost nothing, building himself piece by piece through failure, discipline, and belief. A life that didn’t follow a straight line, but still reached incredible heights.",
+      "The book is structured into four thematic sections: Orientation, Creation, Propitiation and Contemplation. Each chronicling a different phase of his life and professional evolution.",
+
+      "<mark>Perseverance Over Circumstance</mark>: The book emphasizes that humble beginnings (Kalam was the son of a boat owner) do not limit one’s potential. He highlights how hard work, discipline and a strong sense of purpose can help an individual rise from obscurity.",
+ 
+      "<mark>The Power of Mentorship</mark>: Kalam frequently credits his success to his teachers, parents and visionary mentors most notably Vikram Sarabhai and Satish Dhawan—who nurtured his curiosity and provided guidance during his formative years in aerospace and defense research.",
+
+      "<mark>Leadership Through Failure</mark>: A significant portion of the book focuses on the challenges of India’s space and missile programs (such as the SLV-3 and the Agni missile). Kalam openly discusses project failures, framing them not as endpoints, but as essential learning opportunities that paved the way for future breakthroughs.",
+
+      "<mark>National Vision</mark>: The narrative is deeply rooted in patriotism. It details India's struggle for technological self-sufficiency and the drive to build an indigenous defense system, showcasing the collective effort of the Indian scientific community to assert the nation's sovereignty.",  
+
+      "<mark>Harmony and Values</mark>: Kalam paints a vivid picture of his childhood in Rameswaram, a place where people of different faiths lived in mutual respect and communal harmony. He carries these values of inclusivity and integrity throughout his professional life.",
     ],
   },
 ]
